@@ -1,0 +1,293 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Drafto Brand Colors and Modern Variables */
+:root {
+  /* Primary Brand Colors */
+  --ifm-color-primary: #1AA1F1;
+  --ifm-color-primary-dark: #0c8dd6;
+  --ifm-color-primary-darker: #0b85cc;
+  --ifm-color-primary-darkest: #096da8;
+  --ifm-color-primary-light: #31aaef;
+  --ifm-color-primary-lighter: #3db3f0;
+  --ifm-color-primary-lightest: #5cbef3;
+  
+  /* Secondary Brand Color */
+  --ifm-color-secondary: #6B71FE;
+  --ifm-color-secondary-dark: #4851fe;
+  --ifm-color-secondary-darker: #3741fd;
+  --ifm-color-secondary-darkest: #1020fc;
+  --ifm-color-secondary-light: #8e92fe;
+  --ifm-color-secondary-lighter: #a2a5fe;
+  --ifm-color-secondary-lightest: #c9cbff;
+  
+  /* Modern Typography */
+  --ifm-font-family-base: 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', sans-serif;
+  --ifm-heading-font-family: 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', sans-serif;
+  --ifm-font-weight-bold: 600;
+  --ifm-h1-font-size: 3rem;
+  --ifm-h2-font-size: 2.5rem;
+  --ifm-h3-font-size: 2rem;
+  
+  /* Code and Tech Elements */
+  --ifm-code-font-size: 95%;
+  --ifm-code-background: #f8fafc;
+  --ifm-code-border-radius: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(26, 161, 241, 0.1);
+  
+  /* Modern Spacing and Borders */
+  --ifm-border-radius: 12px;
+  --ifm-button-border-radius: 8px;
+  --ifm-card-border-radius: 16px;
+  --ifm-spacing-horizontal: 2rem;
+  --ifm-spacing-vertical: 1.5rem;
+  
+  /* Gradients for Modern Look */
+  --drafto-gradient-primary: linear-gradient(135deg, #1AA1F1 0%, #6B71FE 100%);
+  --drafto-gradient-secondary: linear-gradient(135deg, #6B71FE 0%, #1AA1F1 100%);
+  
+  /* Box Shadows for Depth */
+  --ifm-shadow-lw: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --ifm-shadow-tl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Dark Mode - Adjusted for Drafto Brand */
+[data-theme='dark'] {
+  /* Primary Colors for Dark Mode */
+  --ifm-color-primary: #5cbef3;
+  --ifm-color-primary-dark: #3db3f0;
+  --ifm-color-primary-darker: #31aaef;
+  --ifm-color-primary-darkest: #1AA1F1;
+  --ifm-color-primary-light: #7bc8f5;
+  --ifm-color-primary-lighter: #8dd1f6;
+  --ifm-color-primary-lightest: #b1dff9;
+  
+  /* Secondary Colors for Dark Mode */
+  --ifm-color-secondary: #a2a5fe;
+  --ifm-color-secondary-dark: #8e92fe;
+  --ifm-color-secondary-darker: #7d82fe;
+  --ifm-color-secondary-darkest: #6B71FE;
+  --ifm-color-secondary-light: #b6b8fe;
+  --ifm-color-secondary-lighter: #c2c4fe;
+  --ifm-color-secondary-lightest: #dadcff;
+  
+  /* Dark Mode Specific */
+  --ifm-background-color: #0f1419;
+  --ifm-background-surface-color: #1a1f2e;
+  --ifm-code-background: #2d3748;
+  --docusaurus-highlighted-code-line-bg: rgba(91, 190, 243, 0.15);
+  
+  /* Update gradients for dark mode */
+  --drafto-gradient-primary: linear-gradient(135deg, #5cbef3 0%, #a2a5fe 100%);
+  --drafto-gradient-secondary: linear-gradient(135deg, #a2a5fe 0%, #5cbef3 100%);
+}
+
+/* Modern Button Styles */
+.button {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--ifm-shadow-lw);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-shadow-md);
+}
+
+.button--primary {
+  background: var(--drafto-gradient-primary);
+  border: none;
+  color: white;
+}
+
+.button--secondary {
+  background: var(--drafto-gradient-secondary);
+  border: none;
+  color: white;
+}
+
+/* Modern Card Styles */
+.card {
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-shadow-lw);
+  border: 1px solid rgba(26, 161, 241, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-shadow-md);
+}
+
+/* Modern Navigation */
+.navbar {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(26, 161, 241, 0.1);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(15, 20, 25, 0.95);
+  border-bottom: 1px solid rgba(91, 190, 243, 0.1);
+}
+
+/* Global Modern Enhancements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Footer Enhancements */
+.footer {
+  background: linear-gradient(135deg, #1e2533 0%, #0f1419 100%);
+  border-top: 1px solid rgba(26, 161, 241, 0.1);
+}
+
+.footer--dark {
+  background: linear-gradient(135deg, #1e2533 0%, #0f1419 100%);
+}
+
+/* Link Hover Effects */
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-lighter);
+  text-decoration: none;
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Breadcrumb Enhancements */
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: var(--drafto-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Code Block Enhancements */
+.prism-code {
+  border-radius: 12px;
+  box-shadow: var(--ifm-shadow-md);
+  border: 1px solid rgba(26, 161, 241, 0.1);
+}
+
+/* Table Enhancements */
+.table-wrapper table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--ifm-shadow-lw);
+}
+
+/* Sidebar Enhancements */
+.menu__link {
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu__link:hover {
+  background: rgba(26, 161, 241, 0.1);
+  color: var(--ifm-color-primary);
+  transform: translateX(4px);
+}
+
+.menu__link--active {
+  background: var(--drafto-gradient-primary);
+  color: white;
+  font-weight: 600;
+}
+
+/* Pagination Enhancements */
+.pagination-nav__link {
+  border-radius: 12px;
+  border: 1px solid rgba(26, 161, 241, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Announcement Bar */
+.announcementBar {
+  background: var(--drafto-gradient-primary);
+  color: white;
+  font-weight: 500;
+}
+
+/* DocSearch Enhancements */
+.DocSearch-Button {
+  border-radius: 25px;
+  border: 1px solid rgba(26, 161, 241, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.DocSearch-Button:hover {
+  box-shadow: var(--ifm-shadow-lw);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--drafto-gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--drafto-gradient-secondary);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #1a1f2e;
+}
+
+/* Loading and Transition Effects */
+.main-wrapper {
+  min-height: 100vh;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(26, 161, 241, 0.3);
+  color: inherit;
+}
+
+::-moz-selection {
+  background: rgba(26, 161, 241, 0.3);
+  color: inherit;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
